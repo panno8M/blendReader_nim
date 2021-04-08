@@ -24,9 +24,9 @@ Attention! now this lib only supports:
     if header.sdnaIndex.getStrcType(blend).name == "Mesh":
       let mesh = accessSingle[Mesh](header.memAddr, blend)[]
       echo access[MVert](mesh.mvert, blend).mapIt(it[])
-      echo access[MEdge](mesh.mvert, blend).mapIt(it[])
-      echo access[MPoly](mesh.mvert, blend).mapIt(it[])
-      echo access[MLoop](mesh.mvert, blend).mapIt(it[])
+      echo access[MEdge](mesh.medge, blend).mapIt(it[])
+      echo access[MPoly](mesh.mpoly, blend).mapIt(it[])
+      echo access[MLoop](mesh.mloop, blend).mapIt(it[])
   ```
 * In addition to the above data, it is possible to dump binaly data by searching by type name
   ```nim
